@@ -1,0 +1,7 @@
+{
+  "name": "Agrocor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

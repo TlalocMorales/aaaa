@@ -1,0 +1,83 @@
+<!-- registro.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8">
+        <div class="card shadow-lg">
+          <div class="card-header">
+            <h3 class="text-center">Registro</h3>
+            <p class="text-center">Completa tus datos</p>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="registrar()">
+              <ion-item lines="full">
+                <ion-label position="stacked">Nombre</ion-label>
+                <ion-input
+                  [(ngModel)]="nombre"
+                  name="nombre"
+                  type="text"
+                  placeholder="Tu nombre"
+                  (ionChange)="validateNombre()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!nombreValid">Nombre inválido</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-label position="stacked">Correo</ion-label>
+                <ion-input
+                  [(ngModel)]="email"
+                  name="email"
+                  type="email"
+                  placeholder="name@example.com"
+                  (ionChange)="validateEmail()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!emailValid">Correo inválido</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-label position="stacked">Contraseña</ion-label>
+                <ion-input
+                  [(ngModel)]="password"
+                  name="password"
+                  type="password"
+                  placeholder="*"
+                  (ionChange)="validatePassword()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!passwordValid">La contraseña debe tener al menos 8 caracteres y contener al menos una mayúscula</ion-text>
+              </ion-item>
+
+              <ion-item lines="full">
+                <ion-label position="stacked">Confirmar Contraseña</ion-label>
+                <ion-input
+                  [(ngModel)]="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="*"
+                  (ionChange)="validateConfirmPassword()"
+                  required
+                ></ion-input>
+                <ion-text color="danger" *ngIf="!confirmPasswordValid">Las contraseñas no coinciden</ion-text>
+              </ion-item>
+              <ion-button expand="full" type="submit" color="primary" class="ion-margin-top" [disabled]="!camposValidos() || !emailValid || !passwordValid || !confirmPasswordValid">
+                Registrarse
+              </ion-button>              
+            </form>
+          </div>
+          <div class="card-footer text-center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

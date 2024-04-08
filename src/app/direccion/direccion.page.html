@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Agregar Dirección de Envío
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+
+    <ion-item>
+      <ion-label position="floating">País</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.pais" name="pais"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.nombre" name="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.direccion" name="direccion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ciudad</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.ciudad" name="ciudad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código Postal</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.codigopostal" name="codigopostal"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número telefónico</ion-label>
+      <ion-input type="text" [(ngModel)]="direccion.numerotelefonico" name="numerotelefonico"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón para ir a la página de pago -->
+  <ion-button (click)="irAPago()">
+    Continuar
+  </ion-button>
+</ion-content>

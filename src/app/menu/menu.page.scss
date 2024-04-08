@@ -1,0 +1,34 @@
+ion-menu {
+  width: 250px; /* Ajusta el ancho del menú según tus preferencias */
+}
+
+ion-content#main-content {
+  --ion-background-color: black; /* Fondo negro */
+
+  ion-content {
+    padding: 16px; /* Ajusta el relleno según tus preferencias */
+    color: white; /* Letras blancas */
+  }
+}
+
+.menu-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn1 {
+  margin-bottom: 20px; /* Ajusta el espacio entre los botones */
+  width: 500px; /* Ancho más largo para todos los botones */
+  background-color: green; /* Fondo verde */
+  color: white; /* Color del texto de los botones */
+  border-radius: 20px; /* Forma redondeada */
+}
+
+.img1 {
+  width: 40px; /* Ajusta el tamaño de los iconos */
+  height: 40px; /* Ajusta el tamaño de los iconos */
+  margin-right: 10px;
+}

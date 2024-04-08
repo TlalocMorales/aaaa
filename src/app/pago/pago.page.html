@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Método de Pago
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Mostrar los productos seleccionados -->
+  <ion-list lines="full">
+    <ion-item *ngFor="let producto of productosSeleccionados">
+      <ion-label>{{ producto.name }}</ion-label>
+      <ion-label>{{ producto.price | currency }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Mostrar datos de la direccion-->
+
+  
+
+  <!-- Formulario de pago -->
+  <ion-item>
+    <ion-label position="floating">Nombre del titular</ion-label>
+    <ion-input type="text" [(ngModel)]="metodoPago.nombreTitular" name="nombreTitular"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número de tarjeta</ion-label>
+    <ion-input type="text" [(ngModel)]="metodoPago.numeroTarjeta" name="numeroTarjeta"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de expiración (MM/YY)</ion-label>
+    <ion-input type="text" [(ngModel)]="metodoPago.fechaExpiracion" name="fechaExpiracion"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Código de seguridad</ion-label>
+    <ion-input type="text" [(ngModel)]="metodoPago.codigoSeguridad" name="codigoSeguridad"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" color="primary" (click)="realizarPago()">
+    Pagar con Google Pay
+  </ion-button>
+</ion-content>

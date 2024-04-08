@@ -1,0 +1,56 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <!-- Contenido del menú -->
+    <ion-list>
+      <ion-item routerLink="/home">
+        <ion-label>Cerrar Sesion</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-content id="main-content" class="ion-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content color="fondo">
+    <div class="menu-buttons-container">
+      <!-- Botones del menú principal -->
+      <ion-button class="btn1" color="botones" expand="block" routerLink="/productos">
+        <label>PRODUCTOS</label>
+        <ion-img class="img1" src="https://cdn-icons-png.flaticon.com/512/1170/1170628.png"></ion-img>
+      </ion-button>
+
+      <ion-button class="btn1" color="botones" expand="block" routerLink="/compras">
+        <label>COMPRAS</label>
+        <ion-img class="img1" src="https://cdn-icons-png.flaticon.com/512/1170/1170628.png"></ion-img>
+      </ion-button>
+
+      <ion-button class="btn1" color="botones" expand="block" routerLink="/pedidos">
+        <label>PEDIDOS</label>
+        <ion-img class="img1" src="https://cdn-icons-png.flaticon.com/512/1170/1170628.png"></ion-img>
+      </ion-button>
+
+      <ion-button class="btn1" color="botones" expand="block" routerLink="/ubicaciones">
+        <label>UBICACIONES</label>
+        <ion-img class="img1" src="https://cdn-icons-png.flaticon.com/512/1170/1170628.png"></ion-img>
+      </ion-button>
+
+      <ion-button class="btn1" color="botones" expand="block" routerLink="/contactanos">
+        <label>CONTACTANOS</label>
+        <ion-img class="img1" src="https://cdn-icons-png.flaticon.com/512/1170/1170628.png"></ion-img>
+      </ion-button>
+    </div>
+  </ion-content>
+</ion-content>
